@@ -1,0 +1,20 @@
+#btnSubmit{
+	
+}
+
+.button {
+    background-color: #008CBA;
+}
+
+.btn-centered{
+	display: block;
+	margin: 0 auto;
+}
+
+.btn-full-mobile{
+
+	@media screen and (max-width: $mobile){
+		width: 100%;
+	}
+
+}

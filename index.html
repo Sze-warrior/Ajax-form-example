@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- This is for mobile sizes -->
+    <title>Components - Sign up</title>
+    <link rel="stylesheet" href="css/foundation.min.css" /><!-- Links to the original Foundation Grid -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+<body>
+
+<main>
+
+  <div class="row">
+    <div id="banner">
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="large-8 columns large-centered">
+      <form onsubmit="return false" method="POST">
+        <fieldset>
+          <legend class="text-center">Sign Up to Components:</legend>
+
+          <!-- First Name Section -->
+          <div class="large-6 medium-6 columns">
+            <label><b>First Name</b></label>
+            <input type="text" placeholder="Enter first name" />
+          </div>
+
+          <!-- Last Name Section -->
+          <div class="large-6 medium-6 columns">
+            <label><b>Last Name</b></label>
+            <input type="text" placeholder="Enter first name" />
+          </div>
+
+          <!-- Email Section -->
+          <div class="large-6 medium-6 columns">
+            <label><b>Email Address</b></label>
+              <input type="text" placeholder="Enter email address" />
+          </div>
+
+          <!-- Phone Number Section -->
+          <div class="large-6 medium-6 columns">
+            <label><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter phone number" />
+          </div>
+
+          <div class="large-12 columns">
+            <button id="btnSubmit" onclick="loadBanner()" class="button btn-centered btn-full-mobile">Sign up</button>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</main>
+    
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+<script src="js/ajax-requests.js"></script>    
+</body>
+</html>

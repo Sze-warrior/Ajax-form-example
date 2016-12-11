@@ -1,20 +1,20 @@
 var ajaxRequest = new XMLHttpRequest();
 var btnSubmit = document.querySelectorAll(".btnSubmit");
 var successBanner = document.querySelectorAll('.success');
+var banner = document.getElementById("banner");
 
-ajaxRequest.onreadystatechange = function(){
+function loadSuccess(){
 
-	if(ajaxRequest.readyState === 4 && ajaxRequest.status === 200){
-		var banner = document.getElementById("banner");
-		banner.innerHTML = ajaxRequest.responseText;
-	}else if(ajaxRequest.readyState === 404){
-		alert("File is not found");
+	ajaxRequest.onreadystatechange = function(){
+
+		if(ajaxRequest.readyState === 4 && ajaxRequest.status === 200){
+			banner.innerHTML = ajaxRequest.responseText;
+		}else if(ajaxRequest.readyState === 404){
+			banner.innerHTML = "hmm there was an error...";
+		}
 	}
-};
 
-ajaxRequest.open("Get", "success.html", true);
-
-function loadBanner(){
+	ajaxRequest.open("Get", "success.html", true);
 	ajaxRequest.send();
-}
+};
 
